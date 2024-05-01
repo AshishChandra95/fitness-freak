@@ -1,0 +1,128 @@
+<!DOCTYPE html>   
+<html>
+<head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  .header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+  }
+ img.logo{
+    border-radius: 40px;
+    margin-top: 3px;
+ }
+  
+  ul.ullist {
+    display: flex;
+  }
+  .ullist a,a {
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    color: green;
+  }
+  .ullist a.active {
+    color: green;
+  }
+  div.log {
+    display: flex;
+    align-items: center;
+  }
+  .log a {
+    margin-right: 14px;
+    margin-left: 10px;
+    color: whitesmoke;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  .log a:hover {
+    color: green;
+  }
+  .checkbox {
+    display: none;
+  }
+  .menubtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  input[type=checkbox]:checked ~.ullist{
+    left: 0%;
+  }  
+  @media (max-width: 900px) {
+    .header {
+      padding: 0 0%;
+      transition: 0.2s;
+    }
+    .header a {
+      padding: 5px 0;
+      margin: 0px 20px;
+    }
+  }
+  @media (max-width: 700px) {
+    .menubtn {
+      display: block;
+      font-size: 30px;
+    }
+
+    .ullist {
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      height: 250px;
+      background-color: rgb(75, 72, 72);
+      flex-direction: column;
+      text-align: center;
+      left: -100%;
+      z-index: 1;
+    }
+  
+    .ullist a {
+      display: block;
+      margin: 12px 0;
+      padding: 0px 25px;
+      transition: all 0.5s ease;
+    }
+    .ullist a:hover {
+      color: whitesmoke;
+      font-size: 15px;
+    }
+    .ullist a.active {
+      color: whitesmoke;
+    }
+  }
+  </style>
+  </head>
+  <body>
+    <header class="header" id="header">
+        <img class="logo" src="logo.jpg" alt="ANY" height="60px" width="60px">
+        <label for="check"><ion-icon name="menu" class="menubtn"></ion-icon></label>
+        <input type="checkbox" name="checkbox" id="check" class="checkbox">
+        <ul class="ullist">
+            <li><a href="#header" class="active">HOME</a></li>
+            <li><a href="#section2">ABOUT</a></li>
+            <li><a href="#section4">SERVICE</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+        </ul>
+            <a href="login.html">Log In</a>
+    </header>
+	</body>
+	</html>
